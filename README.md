@@ -1,2 +1,2 @@
-# PoCs-CV
-Pruebas de Concepto - CV (Computer Vision)
+# PoCs-OpenCV GUI
+Pruebas de Concepto - Desarrollo OpenCV GUI apps
