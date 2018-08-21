@@ -3,19 +3,32 @@ import cv2
 from PyQt5 import QtCore
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtGui import QImage, QPixmap
-from PyQt5.QtWidgets import QDialog, QApplication
+from PyQt5.QtWidgets import QDialog, QApplication, QFileDialog
 from PyQt5.uic import loadUi
 
 class MainForm(QDialog):
     def __init__(self):
         super(MainForm, self).__init__()
-        loadUi('02-load-image/main-form.ui', self)
+        loadUi('Life2Coding/03-open-save-image/main-form.ui', self)
         self.image=None
         self.btnLoadImage.clicked.connect(self.loadClicked)
+        self.btnSaveImage.clicked.connect(self.saveClicked)
 
     @pyqtSlot()
     def loadClicked(self):
-        self.loadImage('02-load-image/A380.jpg')
+        fname, filter=QFileDialog.getOpenFileName(self, 'Open File', 'D:\\', "Image Files (*.jpg)")
+        if fname:
+            self.loadImage(fname)
+        else:
+            print('Ivalid Image')
+
+    @pyqtSlot()
+    def saveClicked(self):
+        fname, filter=QFileDialog.getSaveFileName(self, 'Save File', 'D:\\', "Image Files (*.jpg)")
+        if fname:
+            cv2.imwrite(fname,self.image)
+        else:
+            print('Error saving image')
 
     def loadImage(self, fname):
         self.image=cv2.imread(fname)
