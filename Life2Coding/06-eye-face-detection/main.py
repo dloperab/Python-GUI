@@ -7,11 +7,11 @@ from PyQt5.QtWidgets import QDialog, QApplication, QFileDialog
 from PyQt5.uic import loadUi
 
 class MainForm(QDialog):
-    face_cascade=cv2.CascadeClassifier('Life2Coding/06-eye-face-detection/haarcascades/haarcascade_frontalface_default.xml')
-    eyes_cascade=cv2.CascadeClassifier('Life2Coding/06-eye-face-detection/haarcascades/haarcascade_eye.xml')
+    face_cascade=cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_default.xml')
+    eyes_cascade=cv2.CascadeClassifier('haarcascades/haarcascade_eye.xml')
     def __init__(self):
         super(MainForm, self).__init__()
-        loadUi('Life2Coding/06-eye-face-detection/main-form.ui', self)
+        loadUi('main-form.ui', self)
         self.image=None
         self.processedImage=None
         self.btnLoadImage.clicked.connect(self.loadClicked)

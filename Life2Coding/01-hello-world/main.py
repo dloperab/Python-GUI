@@ -6,7 +6,7 @@ from PyQt5.uic import loadUi
 class MainForm(QDialog):
     def __init__(self):
         super(MainForm, self).__init__()
-        loadUi('Life2Coding/01-hello-world/main-form.ui', self)
+        loadUi('main-form.ui', self)
 
 app = QApplication(sys.argv)
 window = MainForm()

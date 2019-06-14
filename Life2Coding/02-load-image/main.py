@@ -9,13 +9,13 @@ from PyQt5.uic import loadUi
 class MainForm(QDialog):
     def __init__(self):
         super(MainForm, self).__init__()
-        loadUi('Life2Coding/02-load-image/main-form.ui', self)
+        loadUi('main-form.ui', self)
         self.image=None
         self.btnLoadImage.clicked.connect(self.loadClicked)
 
     @pyqtSlot()
     def loadClicked(self):
-        self.loadImage('Life2Coding/02-load-image/A380.jpg')
+        self.loadImage('A380.jpg')
 
     def loadImage(self, fname):
         self.image=cv2.imread(fname)

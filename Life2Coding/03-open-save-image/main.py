@@ -9,7 +9,7 @@ from PyQt5.uic import loadUi
 class MainForm(QDialog):
     def __init__(self):
         super(MainForm, self).__init__()
-        loadUi('Life2Coding/03-open-save-image/main-form.ui', self)
+        loadUi('main-form.ui', self)
         self.image=None
         self.btnLoadImage.clicked.connect(self.loadClicked)
         self.btnSaveImage.clicked.connect(self.saveClicked)
