@@ -14,7 +14,7 @@ class MainWindow(QMainWindow):
         self.left = 400
         self.width = 400
         self.height = 400
-        self.icon_name = "images/quantum.png"
+        self.icon_name = "images/home.png"
 
         self._init_window()
 
@@ -28,7 +28,7 @@ class MainWindow(QMainWindow):
     def _init_ui_components(self):
         btn_event = QPushButton("Click me!", self)
         btn_event.setGeometry(QRect(100, 100, 200, 50))
-        btn_event.setIcon(QtGui.QIcon("images/info.png"))
+        btn_event.setIcon(QtGui.QIcon("images/quantum.png"))
         btn_event.setIconSize(QtCore.QSize(40, 40))
         btn_event.setToolTip("Click to detail info")
         btn_event.clicked.connect(self._button_click)

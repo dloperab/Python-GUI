@@ -23,6 +23,13 @@ Proof of Concepts: Develop Python GUI apps
 * [QPush Button: Icon image + Tooltip](YouTube-PyQt5/03_qpush_button.py)
 * [Events and Signals](YouTube-PyQt5/04_events_signals.py)
 * [QHBox and QVBox Layouts](YouTube-PyQt5/05_qhbox_qvbox_layouts.py)
+* [Grid Layout](YouTube-PyQt5/06_grid_layout.py)
+* [Labels](YouTube-PyQt5/07_labels.py)
+* [Images](YouTube-PyQt5/08_images.py)
+* [Radio Button](YouTube-PyQt5/09_radio_button.py)
+* [Check Box](YouTube-PyQt5/10_check_box.py)
+* [Line Edit](YouTube-PyQt5/11_line_edit.py)
+* [Progress Bar](YouTube-PyQt5/12_progress_bar.py)
 
 ## Libraries used
 

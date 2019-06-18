@@ -14,7 +14,7 @@ class MainWindow(QMainWindow):
         self.left = 400
         self.width = 400
         self.height = 400
-        self.icon_name = "images/quantum.png"
+        self.icon_name = "images/home.png"
 
         self.init_window()
 
